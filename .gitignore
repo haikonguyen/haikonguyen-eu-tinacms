@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# tina generated files
+/tina/__generated__
