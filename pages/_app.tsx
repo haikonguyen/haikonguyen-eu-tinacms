@@ -1,8 +1,9 @@
-import dynamic from 'next/dynamic'
-import { TinaEditProvider } from 'tinacms/dist/edit-state'
-const TinaCMS = dynamic(() => import('tinacms'), { ssr: false })
-import '../styles/index.css'
-import {AppProps} from "next/app";
+import dynamic from 'next/dynamic';
+import { TinaEditProvider } from 'tinacms/dist/edit-state';
+const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
+import '../styles/index.css';
+import { AppProps } from 'next/app';
+import { JSX } from '@babel/types';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -24,7 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </TinaEditProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
