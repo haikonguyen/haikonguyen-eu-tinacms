@@ -23,7 +23,8 @@
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
       "@lib/*": ["lib/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "*": ["types/*"]
     }
   },
   "include": [
