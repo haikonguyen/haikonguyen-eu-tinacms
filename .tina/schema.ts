@@ -61,6 +61,9 @@ export default defineSchema({
           label: 'Body',
           name: 'body',
           isBody: true,
+          ui: {
+            component: 'markdown'
+          }
         },
       ],
     },

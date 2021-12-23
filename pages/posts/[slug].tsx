@@ -9,15 +9,28 @@ import PostTitle from '../../components/post-title';
 import Head from 'next/head';
 import { CMS_NAME } from '@lib/constants';
 import { staticRequest } from 'tinacms';
+import { useEffect, useState } from 'react';
+import markdownToHtml from '@lib/markdownToHtml';
 
 //TODO: update to proper type
 const Post = ({ data, slug }: any) => {
   const { title, coverImage, date, author, body, ogImage } =
     data.getPostDocument.data;
   const router = useRouter();
+  const [content, setContent] = useState('');
+
+  useEffect(() => {
+    const parseMarkdown = async () => {
+      setContent(await markdownToHtml(body));
+    };
+
+    parseMarkdown();
+  }, [body]);
+
   if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout preview={false}>
       <Container>
@@ -39,7 +52,7 @@ const Post = ({ data, slug }: any) => {
                 date={date}
                 author={author}
               />
-              <PostBody content={body} />
+              <PostBody content={content} />
             </article>
           </>
         )}
