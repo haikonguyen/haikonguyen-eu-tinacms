@@ -16,6 +16,23 @@ const App = ({ Component, pageProps }: AppProps) => {
             isLocalClient={Boolean(
               Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT ?? true)
             )}
+            documentCreatorCallback={{
+              /**
+               * After a new document is created, redirect to its location
+               */
+              onNewDocument: ({ collection: { slug }, breadcrumbs }) => {
+                const relativeUrl = `/${slug}/${breadcrumbs.join('/')}`;
+                return (window.location.href = relativeUrl);
+              },
+              /**
+               * Only allows documents to be created to the `Blog Posts` Collection
+               */
+              filterCollections: (options) => {
+                return options.filter(
+                  (option) => option.label === 'Blog Posts'
+                );
+              },
+            }}
             {...pageProps}
           >
             {(livePageProps: JSX.Element) => <Component {...livePageProps} />}
