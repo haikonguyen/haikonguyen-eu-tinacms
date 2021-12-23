@@ -3,7 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
-      "post"
+      "posts"
     ]
   },
   "Node": {
@@ -16,16 +16,16 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
-  "PostDocument": {
-    "type": "PostDocument",
+  "PostsDocument": {
+    "type": "PostsDocument",
     "resolveType": "collectionDocument",
-    "collection": "post",
-    "createPostDocument": "create",
-    "updatePostDocument": "update"
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
   },
-  "PostConnection": {
-    "type": "PostConnection",
+  "PostsConnection": {
+    "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "post"
+    "collection": "posts"
   }
 }

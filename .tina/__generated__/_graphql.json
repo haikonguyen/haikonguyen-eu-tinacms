@@ -677,7 +677,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "getPostDocument"
+            "value": "getPostsDocument"
           },
           "arguments": [
             {
@@ -701,7 +701,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "PostDocument"
+                "value": "PostsDocument"
               }
             }
           }
@@ -710,7 +710,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "getPostList"
+            "value": "getPostsList"
           },
           "arguments": [
             {
@@ -776,7 +776,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "PostConnection"
+                "value": "PostsConnection"
               }
             }
           }
@@ -1130,7 +1130,7 @@
           "kind": "NamedType",
           "name": {
             "kind": "Name",
-            "value": "PostDocument"
+            "value": "PostsDocument"
           }
         }
       ]
@@ -1141,7 +1141,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "PostAuthor"
+        "value": "PostsAuthor"
       },
       "fields": [
         {
@@ -1182,7 +1182,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "PostOgImage"
+        "value": "PostsOgImage"
       },
       "fields": [
         {
@@ -1208,7 +1208,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "Post"
+        "value": "Posts"
       },
       "fields": [
         {
@@ -1282,7 +1282,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostAuthor"
+              "value": "PostsAuthor"
             }
           }
         },
@@ -1297,7 +1297,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostOgImage"
+              "value": "PostsOgImage"
             }
           }
         },
@@ -1339,7 +1339,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "PostDocument"
+        "value": "PostsDocument"
       },
       "fields": [
         {
@@ -1391,7 +1391,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Post"
+                "value": "Posts"
               }
             }
           }
@@ -1458,7 +1458,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "PostConnectionEdges"
+        "value": "PostsConnectionEdges"
       },
       "fields": [
         {
@@ -1487,7 +1487,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostDocument"
+              "value": "PostsDocument"
             }
           }
         }
@@ -1507,7 +1507,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "PostConnection"
+        "value": "PostsConnection"
       },
       "fields": [
         {
@@ -1556,7 +1556,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "PostConnectionEdges"
+                "value": "PostsConnectionEdges"
               }
             }
           }
@@ -1777,7 +1777,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "updatePostDocument"
+            "value": "updatePostsDocument"
           },
           "arguments": [
             {
@@ -1809,7 +1809,7 @@
                   "kind": "NamedType",
                   "name": {
                     "kind": "Name",
-                    "value": "PostMutation"
+                    "value": "PostsMutation"
                   }
                 }
               }
@@ -1821,7 +1821,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "PostDocument"
+                "value": "PostsDocument"
               }
             }
           }
@@ -1830,7 +1830,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "createPostDocument"
+            "value": "createPostsDocument"
           },
           "arguments": [
             {
@@ -1862,7 +1862,7 @@
                   "kind": "NamedType",
                   "name": {
                     "kind": "Name",
-                    "value": "PostMutation"
+                    "value": "PostsMutation"
                   }
                 }
               }
@@ -1874,7 +1874,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "PostDocument"
+                "value": "PostsDocument"
               }
             }
           }
@@ -1892,13 +1892,13 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "post"
+            "value": "posts"
           },
           "type": {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostMutation"
+              "value": "PostsMutation"
             }
           }
         }
@@ -1908,7 +1908,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "PostAuthorMutation"
+        "value": "PostsAuthorMutation"
       },
       "fields": [
         {
@@ -1945,7 +1945,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "PostOgImageMutation"
+        "value": "PostsOgImageMutation"
       },
       "fields": [
         {
@@ -1968,7 +1968,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "PostMutation"
+        "value": "PostsMutation"
       },
       "fields": [
         {
@@ -2037,7 +2037,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostAuthorMutation"
+              "value": "PostsAuthorMutation"
             }
           }
         },
@@ -2051,7 +2051,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "PostOgImageMutation"
+              "value": "PostsOgImageMutation"
             }
           }
         },
