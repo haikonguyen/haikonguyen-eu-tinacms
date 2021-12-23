@@ -15,7 +15,7 @@ import markdownToHtml from '@lib/markdownToHtml';
 //TODO: update to proper type
 const Post = ({ data, slug }: any) => {
   const { title, coverImage, date, author, body, ogImage } =
-    data.getPostDocument.data;
+    data.getPostsDocument.data;
   const router = useRouter();
   const [content, setContent] = useState('');
 
@@ -69,7 +69,7 @@ export const getStaticProps = async ({ params }: any) => {
 
   const query = `
     query BlogPostQuery($relativePath: String!) {
-      getPostDocument(relativePath: $relativePath) {
+      getPostsDocument(relativePath: $relativePath) {
         data {
           title
           excerpt
@@ -107,7 +107,7 @@ export async function getStaticPaths() {
   const postsListData: any = await staticRequest({
     query: `
       query {
-        getPostList {
+        getPostsList {
           edges {
             node {
             sys {
@@ -123,7 +123,7 @@ export async function getStaticPaths() {
 
   return {
     //TODO: update to proper type
-    paths: postsListData?.getPostList?.edges?.map((edge: any) => ({
+    paths: postsListData?.getPostsList?.edges?.map((edge: any) => ({
       params: { slug: edge.node.sys.filename },
     })),
     fallback: false,
