@@ -32,7 +32,7 @@ const Post = ({ data, slug }: any) => {
   }
 
   return (
-    <Layout preview={false}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
