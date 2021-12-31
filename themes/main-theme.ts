@@ -1,16 +1,16 @@
-import { createTheme, CustomTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
+import { createTheme, CustomThemeOptions } from '@mui/material/styles';
+import { blue, yellow } from '@mui/material/colors';
 
-const theme: CustomTheme = createTheme({
+const theme: CustomThemeOptions = createTheme({
   status: {
-    danger: purple[500],
+    danger: blue[500],
   },
   palette: {
     primary: {
-      main: purple[500],
+      main: blue[500],
     },
     secondary: {
-      main: '#f44336',
+      main: yellow[500],
     },
   },
 });
