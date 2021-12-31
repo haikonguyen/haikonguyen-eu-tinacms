@@ -4,6 +4,8 @@ const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 import '../styles/index.css';
 import { AppProps } from 'next/app';
 import { JSX } from '@babel/types';
+import { ThemeProvider } from '@mui/system';
+import theme from '@themes/main-theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -44,7 +46,9 @@ const App = ({ Component, pageProps }: AppProps) => {
           </TinaCMS>
         }
       >
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </TinaEditProvider>
     </>
   );

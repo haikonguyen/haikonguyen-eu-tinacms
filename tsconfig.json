@@ -22,10 +22,11 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
-      "@utils/*": ["utils/*"],
       "@lib/*": ["lib/*"],
       "@services/*": ["services/*"],
+      "@styles/*": ["styles/*"],
       "@themes/*": ["themes/*"],
+      "@utils/*": ["utils/*"],
       "*": ["types/*"]
     },
     "noImplicitAny": true,
