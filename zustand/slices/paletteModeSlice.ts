@@ -1,16 +1,11 @@
 import { NamedSet } from 'zustand/middleware';
-import { GetState, State } from 'zustand';
-import { PaletteMode } from '@mui/material';
-
-interface Store extends State {
-  paletteMode: PaletteMode;
-  setPaletteMode: () => void;
-}
+import { GetState } from 'zustand';
+import { PaletteModeSliceProps } from '../types';
 
 const createPaletteModeSlice = (
-  set: NamedSet<Store>,
-  get: GetState<Store>
-) => ({
+  set: NamedSet<PaletteModeSliceProps>,
+  get: GetState<PaletteModeSliceProps>
+): PaletteModeSliceProps => ({
   paletteMode: 'dark',
   setPaletteMode: () =>
     set(

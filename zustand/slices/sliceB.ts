@@ -1,12 +1,11 @@
 import { NamedSet } from 'zustand/middleware';
-import { GetState, State } from 'zustand';
+import { GetState } from 'zustand';
+import { BSliceProps } from '../types';
 
-interface Store extends State {
-  bState: string;
-  setPaletteMode: () => void;
-}
-
-const createBSlice = (set: NamedSet<Store>, get: GetState<Store>) => ({
+const createBSlice = (
+  set: NamedSet<BSliceProps>,
+  get: GetState<BSliceProps>
+): BSliceProps => ({
   bState: 'light',
   setBMode: () =>
     set(
