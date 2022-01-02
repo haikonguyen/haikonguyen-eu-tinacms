@@ -5,7 +5,7 @@ import '../styles/index.css';
 import { AppProps } from 'next/app';
 import { JSX } from '@babel/types';
 import { ThemeProvider } from '@mui/system';
-import theme from '@themes/main-theme';
+import useCustomTheme from '@themes/main-theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -46,7 +46,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           </TinaCMS>
         }
       >
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={useCustomTheme()}>
           <Component {...pageProps} />
         </ThemeProvider>
       </TinaEditProvider>
