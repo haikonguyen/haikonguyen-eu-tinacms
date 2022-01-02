@@ -6,6 +6,7 @@ import { AppProps } from 'next/app';
 import { JSX } from '@babel/types';
 import { ThemeProvider } from '@mui/system';
 import useCustomTheme from '@themes/main-theme';
+import ClientOnly from '@components/client-only';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -47,7 +48,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         }
       >
         <ThemeProvider theme={useCustomTheme()}>
-          <Component {...pageProps} />
+          <ClientOnly>
+            <Component {...pageProps} />
+          </ClientOnly>
         </ThemeProvider>
       </TinaEditProvider>
     </>
