@@ -2,7 +2,7 @@ import { NamedSet } from 'zustand/middleware';
 import { GetState } from 'zustand';
 import { BSliceProps } from '../types';
 
-const createBSlice = (
+export const createBSlice = (
   set: NamedSet<BSliceProps>,
   get: GetState<BSliceProps>
 ): BSliceProps => ({
@@ -16,5 +16,3 @@ const createBSlice = (
       'SET_PALETTE_MODE'
     ),
 });
-
-export default createBSlice;

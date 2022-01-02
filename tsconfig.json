@@ -24,6 +24,7 @@
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
       "@services/*": ["services/*"],
+      "@state/*": ["state/*"],
       "@styles/*": ["styles/*"],
       "@themes/*": ["themes/*"],
       "@utils/*": ["utils/*"],

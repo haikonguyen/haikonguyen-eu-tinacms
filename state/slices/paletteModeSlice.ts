@@ -2,7 +2,7 @@ import { NamedSet } from 'zustand/middleware';
 import { GetState } from 'zustand';
 import { PaletteModeSliceProps } from '../types';
 
-const createPaletteModeSlice = (
+export const createPaletteModeSlice = (
   set: NamedSet<PaletteModeSliceProps>,
   get: GetState<PaletteModeSliceProps>
 ): PaletteModeSliceProps => ({
@@ -16,5 +16,3 @@ const createPaletteModeSlice = (
       'SET_PALETTE_MODE'
     ),
 });
-
-export default createPaletteModeSlice;

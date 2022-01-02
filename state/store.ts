@@ -1,7 +1,6 @@
 import create, { GetState } from 'zustand';
 import { devtools, NamedSet, persist } from 'zustand/middleware';
-import createPaletteModeSlice from './paletteMode';
-import createBSlice from './sliceB';
+import { createBSlice, createPaletteModeSlice } from '@state/slices';
 
 const useStore = create(
   persist(
