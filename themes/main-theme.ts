@@ -1,18 +1,12 @@
 import { createTheme, CustomThemeOptions } from '@mui/material/styles';
-import { blue, yellow } from '@mui/material/colors';
+import { useThemeOptions } from './utils';
 
-const theme: CustomThemeOptions = createTheme({
-  status: {
-    danger: blue[500],
-  },
-  palette: {
-    primary: {
-      main: blue[500],
-    },
-    secondary: {
-      main: yellow[500],
-    },
-  },
-});
+const useCustomTheme = (): CustomThemeOptions => {
+  const { status, palette } = useThemeOptions();
+  return createTheme({
+    status,
+    palette,
+  });
+};
 
-export default theme;
+export default useCustomTheme;

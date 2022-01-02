@@ -9,14 +9,14 @@ declare module '@mui/material/styles' {
   }
   // allow configuration using `createTheme`
   interface ThemeOptions {
-    status?: {
-      danger?: string;
+    status: {
+      danger: string;
     };
   }
 
   interface CustomTheme extends Theme {
     // we can add additional props to the CustomTheme below
-    status?: {
+    status: {
       danger: string;
     };
     palette: Palette;
@@ -25,7 +25,7 @@ declare module '@mui/material/styles' {
   interface CustomThemeOptions extends ThemeOptions {
     /* each prop we add in the CustomTheme must be created in the options below
     as well */
-    status?: {
+    status: {
       danger: string;
     };
     palette: PaletteOptions;
