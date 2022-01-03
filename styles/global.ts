@@ -4,11 +4,12 @@ import { CustomTheme } from '@mui/material/styles';
 
 const useGlobalStyle = () => {
   const theme: CustomTheme = useTheme();
-  const { palette } = theme || {};
+  const { status } = theme || {};
 
   return css`
     body {
-      color: ${palette};
+      color: ${status?.danger};
+      font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     }
   `;
 };

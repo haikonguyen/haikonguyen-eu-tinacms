@@ -1,20 +1,17 @@
-import { blue, yellow } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 import { CustomThemeOptions } from '@mui/material/styles';
-import useStore from '../zustand/store';
+import useStore from '@state/store';
 
 export const useThemeOptions = (): CustomThemeOptions => {
-  const { paletteMode } = useStore();
+  const store = useStore();
+  const { paletteMode } = store;
+
   return {
     status: {
       danger: paletteMode === 'dark' ? blue[500] : 'red',
     },
     palette: {
-      primary: {
-        main: blue[500],
-      },
-      secondary: {
-        main: yellow[500],
-      },
+      mode: paletteMode,
     },
   };
 };
